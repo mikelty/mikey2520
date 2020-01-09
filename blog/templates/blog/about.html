@@ -1,0 +1,94 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<article class="media content-section">
+  <div class="media-body container col-sm-12 about">
+    <h1>Michael Liu (刘天宇)</h1>
+    <a style="font-size: 24px" href="/static/img/resume_placeholder.jpg" download>Resume</a>
+    <hr>
+    <h2>A little about myself</h2>
+    <a href="/static/img/selfie.jpg">a picture of me</a>
+    <p>I'm a third-year student at UW - Madison. I come from <a href="https://en.wikipedia.org/wiki/Guangzhou">Guangzhou</a>, China.</p>
+    <p>email: __my__english__first__name__see__title__lty2520@gmail.com</p>
+    <hr>
+    <h2>Current Projects</h2>
+    <ul>
+    	<li>Review Math (complex analysis, abstract algebra, topology, cryptography)</li>
+    	<li>Develop an android app (little idea what to do yet)</li>
+    	<li>A OS X app that plays slideshow with customized speed</li>
+    	<li>Rewrite the tracking system for internet installation using django (see Work Experience for details)</li>
+    	<li><a href="https://en.wikipedia.org/wiki/Gomoku">gomoku</a> AI</li>
+    	<li>Implement some <a href="https://en.wikipedia.org/wiki/Artificial_neural_network">ANN</a>, preferably <a href="https://www.youtube.com/watch?v=qv6UVOQ0F44&t=186s">something that plays a game</a> or using <a href="https://en.wikipedia.org/wiki/Long_short-term_memory">LSTM</a></li>
+    </ul>
+    <hr>
+    <h2>Some of my past projects</h2>
+    <ul>
+    	<li>My Blog (aka this site)</li>
+    	<ul>
+    		<li>Started with <a href="https://www.youtube.com/watch?v=UmljXZIypDc&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p">a great online tutorial</a></li>
+    		<li>Developed using <a href="https://en.wikipedia.org/wiki/Django_(web_framework)">Django</a> and <a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python 3</a></li>
+    		<li>Added many other functions like search-bar, site navigations (by time and by tag), tags (by <a href="https://github.com/jazzband/django-taggit">taggit</a>), markdown, (by <a href="https://github.com/neutronX/django-markdownx">markdownx</a>) comments, etc.</li>
+    	</ul>
+    	<li><a href="https://en.wikipedia.org/wiki/Matrix_completion">Matrix Completion</a></li>
+    	<ul>
+    		<li>A machine learning method to <a href="https://en.wikipedia.org/wiki/Netflix_Prize">predict movie ratings</a>, and <a href="http://www.princeton.edu/~yc5/ele538b_sparsity/lectures/matrix_recovery.pdf">other interesting stuff</a></li>
+    		<li><a href="/static/files/code.zip">Link to my implementation</a></li>
+    		<li><a href="/static/files/writeup.pdf">Writeup with teammates</a></li>
+    		<li>Usnig <a href="https://arxiv.org/abs/1401.2451">two better algorithms</a> than the one we learned in class, Iterative Singular Value Thresholding (<a href="https://arxiv.org/abs/0810.3286">sample paper describing it</a>), we are able to lower errors by more than ten-fold (<a href="/static/img/matrix_completion_err1">result 1</a>, <a href="/static/img/matrix_completion_err2">result 2</a>)</li>
+    		<li>A final project of course ECE 532 at UW - Madison</li>
+    	</ul>
+    	<li>Competitive Programming</li>
+    	<ul>
+    		<li>link to my <a href="https://open.kattis.com/users/michael--liu">kattis</a> and <a href="https://leetcode.com/mikeyliu/">leetcode account</a></li>
+    		<li>solved thousands of interesting programming puzzles</li>
+    		<li>Participated in ICPC (north central region) in 2017 and some other online contests like Google Code Jam</li>
+    	</ul>
+    </ul>
+    <hr>
+    <h2>Work experience</h2>
+    <ul>
+    	<li>2018.10 - 2019.1 helped my family business set up a tracking system for their internet installation services<li>
+    	<li>2017.2 - 2017.4 <a href="https://peopleprogram.wisc.edu/">PEOPLE Program tutor</a></li>
+    	<li>2015.9 - 2016.5 <a href="https://www.nand2tetris.org/">Nand2Tetris</a> TA at my high school (happily volunteered, no pay)</li>
+    </ul>
+    <hr>
+    <h2>A list of classes I've taken (grades, comments)</h2>
+    <p>Currently all classes are taken at UW - Madison, which means their numbers come from our school's course catalog. Entry-level classes omitted, though I did do pretty bad in one architecture class, because I was pretty much the only freshman in class (thanks to Nand2Tetris) and was trying to learn <a href="https://en.wikipedia.org/wiki/Clang">Clang</a> in one month...oh well.</p>
+    <p>Note that classes vary from year to year and my feelings about 'em are (by definition) not objective.</p>
+    <ul>
+    	<li>Computer Science</li>
+    	<ul>
+    		<li>CS 435 (BC) - covers the basics of cryptography, somewhat mathy (not proof-based but mathy). if you're into security consider taking 639 (one variation of it). probably shouldn't it with three other math classes...</li>
+    		<li>CS 520 : Theory of Computer (A) - if you're interested in theory, this is a great class to take. it's also kinda easy.</li>
+    		<li>CS 532 : Matrix Methods in Machine Learning(B) - this is a pretty good class. you learn a lot about machine learning, especially toward the foundations, which is very important and very easy to overlook. i imagine that i could do better in it some other time, since i took it right after my gap year.</li>
+    		<li>CS 537 : Operating Systems (A) - this is a must-take for any CS majors in my arrogant opinion. pretty solid. but if you're not good at algorithms or system programming (CS 564, etc.) don't take this class with them. I took it with complex analysis (Math 522) and had to drop complex analysis.</li>
+    		<li>CS 540 : Intro to Artificial Intelligence (AB) - while i've heard others who had to do serious work for this class, i did not do much coding in this class.</li>
+    		<li>CS 559 : Computer Graphics (AB) - pretty interesting class if you're into game design or just drawing pretty things using algorithms in general.</li>
+    		<li>CS 564 : Database (AB) - my prof. teaching this semester is a guru in his field who loves relational databases and his glorious days that shaped the field. upside: lots of cool database tricks, pretty intellectual; downside: too much cool database tricks that undergrads are not going to need for the rest of their lives. also, lots of the assignments are either too easy or too hard.</li>
+    		<li>CS 577 : Algorithms (AB) - i love algorithms.</li>
+    		<li>CS 640 : Computer Networks (A) - okay class, prof. was entuhusiastic about the subject. but why did we use Java to do network programming assignments? thank God they redid it with Python now.</li>
+    	</ul>
+    	<li>Math</li>
+    	<ul>
+    		<li>Math 375 : Honors Calculus and Linear Algebra (I) (A) - Linear algebra, intro-level diff. eq. (ODEs), and a little analysis. This is proof-based and it's really solid.</li>
+    		<li>Math 376 : Honors Calculus and Linear Algebra (II) (A) - Calculus. Again, proof-based and the scope is really wide (prof. introduced differential forms at the end.).</li>
+    		<li>Math 521 : Analysis (I) (A) - Basic analysis, proofs are really elegant but this class is not really solid, as far as i know.</li>
+    		<li>Math 522 : Analysis (II) (B) - Complex analysis, proofs are really long and hard. Don't take this class when you have other heavy workloads.</li>
+    		<li>Math 541 : Abstract Algebra (I) (A) - Really interesting branch of math. Would recommend to any CS major who wants to learn more math.</li>
+    		<li>Math 551 : Topology (I) (A) - Another really interesting branch of math but not so close to CS. If you did well in this class, there's actually still so much to learn in topology.</li>
+    	</ul>
+    	<li>Other</li>
+    	<ul>
+    		<li>Soc 125 : American Society - How it really works? (AB) - Really interesting sociology class that discusses a wide range of important topics. Light workload. Would totally recommend.</li>
+    		<li>Hist 201 : History of Humanitarianism (AB) - (Comm B class, not so heavy workload though) interesting class with a wide range of materials and good lecture.</li>
+    		<li>Lang 101 : Intro to Linguistics (Dropped) - Dropped before first midterm (about a month into the class). If you want to do NLP (natural language processing), you don't have to take this class as it is a lot of phonetics (not that it's not important). Perhaps read some up-to-date intro NLP books or <a href="https://en.wikipedia.org/wiki/Syntactic_Structures">syntactic structures</a>.</li>
+    	</ul>
+    </ul>
+    <hr>
+    <h2>Timeline</h2>
+    <p>2019.9 - Now Studying at <a href="https://en.wikipedia.org/wiki/University_of_Wisconsin%E2%80%93Madison">UW - Madison</a></p>
+    <p>2018.9 - 2019.8 Gap Year</p>
+    <p>2016.9 - 2018.8 Studied at <a href="https://en.wikipedia.org/wiki/University_of_Wisconsin%E2%80%93Madison">UW - Madison</a></p>
+    <p>2012.9 - 2016.6 Studied at <a href="https://en.wikipedia.org/wiki/Allendale_Columbia_School">Allendale Columia School</a></p>
+  </div>
+</article>
+{% endblock content %}

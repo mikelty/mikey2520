@@ -1,0 +1,45 @@
+{% extends "blog/base.html" %}
+{% block content %}
+  <article class="media content-section">
+    <div class="media-body container col-sm-12">
+      <div class="article-metadata">
+        <a class="mr-2" href="{% url 'user-posts' posts.author.username %}">{{ posts.author }}</a>
+        <small class="text-muted">{{ posts.date_posted|date:"F d, Y" }}</small>
+        {% if posts.comments.all|length > 0 %}
+          <small class="float-right text-muted">{{ posts.comments.all|length }} comment(s)</small>
+        {% endif %}
+        {% if posts.author == user %}
+          <div>
+            <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' posts.id %}">Update</a>
+            <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' posts.id %}">Delete</a>
+          </div>
+        {% endif %}
+      </div>
+      <h2 class="article-title">{{ posts.title }}</h2>
+      <p class="article-content text-justify">{{ posts.formatted_markdown|safe }}</p>
+      <div>
+      {% for t in posts.tags.all %}
+        <a class="btn btn-link btn-sm mt-1 mb-1 tag" href="{% url 'tag-posts' t.name %}">{{ t.name }}</a>
+      {% endfor %}
+      </div>
+      <div class="col-md-12">
+        <strong>Leave a comment:</strong>
+        <form method="POST">
+            {% csrf_token %}
+            {{ new_comment_form.as_ul }}
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Post</button>
+            </div>
+        </form>
+      </div>
+      <hr>
+      {% for comment in posts.comments.all %}
+          <div class="comment">
+              <div class="date">{{ comment.created_date }}</div>
+              <strong>{{ comment.author }}</strong>
+              <p>{{ comment.formatted_markdown|safe }}</p>
+          </div>
+      {% endfor %}
+    </div>
+  </article>
+{% endblock content %}
